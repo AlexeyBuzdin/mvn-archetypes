@@ -1,16 +1,22 @@
+# Idea files
 *.iml
+*.ipr
+*.iws
 .idea/
-target/
 out/
 
+# Eclipse files
+.project
+.classpath
+.settings/
 
+# Maven files
+target/
+
+# Class files and archives
 *.class
 *.war
 *.jar
 *.ear
 *.dex
 *.apk
-
-
-
-
