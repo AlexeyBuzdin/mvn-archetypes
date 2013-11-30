@@ -6,9 +6,28 @@ import com.vaadin.ui.*;
 public class HelloVaadin extends Application {
     @Override
     public void init() {
-        Window mainWindow = new Window("HelloVaadin");
-        Label label = new Label("Hello Vaadin user");
-        mainWindow.addComponent(label);
+        setTheme("mytheme");
+
+        final Window mainWindow = new Window("HelloVaadin");
+
+        HorizontalLayout layout = new HorizontalLayout();
+        layout.addComponent(new Label("Hello Vaadin user"));
+
+        Label world = new Label("World");
+        world.addStyleName("test-style");
+        layout.addComponent(world);
+
+        Button button = new Button("Click me");
+        button.addListener(new Button.ClickListener() {
+            @Override
+            public void buttonClick(Button.ClickEvent clickEvent) {
+                mainWindow.showNotification("Button Clicked");
+            }
+        });
+        layout.addComponent(button);
+
+
+        mainWindow.addComponent(layout);
         setMainWindow(mainWindow);
     }
 }

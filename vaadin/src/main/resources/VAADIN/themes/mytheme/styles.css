@@ -1,0 +1,9 @@
+@import "../reindeer/styles.css";
+
+.test-style {
+    visibility: hidden;
+}
+
+.v-app {
+    background: yellow;
+}
