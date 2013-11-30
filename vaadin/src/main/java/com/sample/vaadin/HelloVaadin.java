@@ -21,6 +21,7 @@ public class HelloVaadin extends Application {
         button.addListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
+
                 mainWindow.showNotification("Button Clicked");
             }
         });

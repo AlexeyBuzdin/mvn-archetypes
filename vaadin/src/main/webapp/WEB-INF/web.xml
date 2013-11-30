@@ -5,11 +5,13 @@
          xmlns="[http://java.sun.com/xml/ns/javaee]"
          xsi:schemalocation="[http://java.sun.com/xml/ns/javaee] [http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd]">
     <display-name>HelloVaadin</display-name>
+
     <context-param>
         <param-name>productionMode</param-name>
         <param-value>false</param-value>
         <description>Vaadin production mode</description>
     </context-param>
+
     <servlet>
         <servlet-name>HelloVaadin</servlet-name>
         <servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>
@@ -19,6 +21,7 @@
             <description>Vaadin application class to start</description>
         </init-param>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>HelloVaadin</servlet-name>
         <url-pattern>/*</url-pattern>
